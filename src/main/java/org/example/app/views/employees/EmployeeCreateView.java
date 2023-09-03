@@ -27,6 +27,7 @@ public class EmployeeCreateView {
         try {
             return scanner.nextInt();
         } catch (InputMismatchException ime) {
+            System.out.println("Enter position id again: ");
             return getPositionId();
         }
     }
@@ -36,6 +37,7 @@ public class EmployeeCreateView {
         try {
              return scanner.nextDouble();
         } catch (InputMismatchException ime) {
+            System.out.println("Enter salary again: ");
             return getSalary();
         }
     }
