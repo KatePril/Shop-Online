@@ -20,7 +20,7 @@ public class EmployeeReadRepository {
 
             list = new ArrayList<>();
 
-            String sql = "SELECT id, lastName, firstName, birthDate, positionId, phone, salary FROM" + Constants.TABLE_EMPLOYEES;
+            String sql = "SELECT id, lastName, firstName, birthDate, positionId, phone, salary FROM " + Constants.TABLE_EMPLOYEES;
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
@@ -35,7 +35,7 @@ public class EmployeeReadRepository {
                     )
                 );
             }
-
+            System.out.println(list.toString());
             return list;
         } catch (SQLException e) {
             return Collections.emptyList();
